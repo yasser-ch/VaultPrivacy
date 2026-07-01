@@ -28,6 +28,14 @@ Application Android de démonstration des bonnes pratiques de gestion des permis
 
 ---
 
+## DEMO
+
+
+
+https://github.com/user-attachments/assets/836fd38d-1eac-44be-a706-ce8b43964169
+
+
+
 ## 🗂️ Structure
 
 ```
