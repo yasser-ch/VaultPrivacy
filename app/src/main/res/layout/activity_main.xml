@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="24dp"
+        android:paddingTop="56dp"
+        android:paddingBottom="40dp">
+
+        <!-- Header -->
+        <TextView
+            android:id="@+id/tvIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🔏"
+            android:textSize="40sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VaultPrivacy"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@id/tvIcon"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Permissions et vie privée sur Android"
+            android:textSize="14sp"
+            android:textColor="@color/text_muted"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <!-- Section Pickers -->
+        <TextView
+            android:id="@+id/tvPickersLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PICKERS MODERNES"
+            android:textSize="11sp"
+            android:textColor="@color/text_muted"
+            android:letterSpacing="0.15"
+            android:layout_marginTop="36dp"
+            app:layout_constraintTop_toBottomOf="@id/tvSubtitle"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <LinearLayout
+            android:id="@+id/llPickers"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@id/tvPickersLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPhotoPicker"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="🖼️  Photo Picker"
+                android:textSize="15sp"
+                android:layout_marginBottom="10dp"
+                app:backgroundTint="@color/purple_primary"
+                app:cornerRadius="14dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAudioPicker"
+                style="@style/VaultButtonOutlined"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="🎵  Audio Picker"
+                android:textSize="15sp"
+                android:textColor="@color/text_primary"
+                android:layout_marginBottom="10dp"
+                app:strokeColor="@color/purple_dim"
+                app:strokeWidth="1dp"/>
+
+        </LinearLayout>
+
+        <!-- Section Permissions -->
+        <TextView
+            android:id="@+id/tvPermLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PERMISSIONS"
+            android:textSize="11sp"
+            android:textColor="@color/text_muted"
+            android:letterSpacing="0.15"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@id/llPickers"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <LinearLayout
+            android:id="@+id/llPerms"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@id/tvPermLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLocation"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="📍  Permission Localisation"
+                android:textSize="15sp"
+                android:layout_marginBottom="10dp"
+                app:backgroundTint="@color/purple_primary"
+                app:cornerRadius="14dp"/>
+
+        </LinearLayout>
+
+        <!-- Section Privacy -->
+        <TextView
+            android:id="@+id/tvPrivacyLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PRIVACY SANDBOX"
+            android:textSize="11sp"
+            android:textColor="@color/text_muted"
+            android:letterSpacing="0.15"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@id/llPerms"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <LinearLayout
+            android:id="@+id/llPrivacy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@id/tvPrivacyLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPrivacySandbox"
+                style="@style/VaultButtonOutlined"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="🔒  Privacy Sandbox"
+                android:textSize="15sp"
+                android:textColor="@color/text_primary"
+                android:layout_marginBottom="10dp"
+                app:strokeColor="@color/purple_dim"
+                app:strokeWidth="1dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnFinalWorkshop"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="🚀  Atelier Final"
+                android:textSize="15sp"
+                app:backgroundTint="@color/teal_accent"
+                app:cornerRadius="14dp"/>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
